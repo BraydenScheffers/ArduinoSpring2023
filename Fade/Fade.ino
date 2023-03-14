@@ -1,3 +1,8 @@
+//Programmer: Brayden Scheffers
+//Date: 14.3.2023
+//Program: Fade
+
+
 /*
   Fade
 
