@@ -17,12 +17,12 @@
 // the setup routine runs once when you press reset:
 
 
-#define trigPin 2
-#define echoPin 3
-#define LEDlampRed 4
-#define  LEDlampYellow 5
-#define LEDlampGreen 6 
-#define soundbuzzer 7
+int trigPin = 7; 
+int echoPin = 6; 
+int LEDlampGreen = 9; 
+int LEDlampBlue = 10; 
+int LEDlampRed = 11;  
+int soundbuzzer = 3; 
 int sound  = 500;
 
 
@@ -30,9 +30,9 @@ void setup() {
   Serial.begin (9600);
   pinMode(trigPin,  OUTPUT);
   pinMode(echoPin, INPUT);
-  pinMode(LEDlampRed, OUTPUT);
-  pinMode(LEDlampYellow,  OUTPUT);
   pinMode(LEDlampGreen, OUTPUT);
+  pinMode(LEDlampBlue,  OUTPUT);
+  pinMode(LEDlampRed, OUTPUT);
   pinMode(soundbuzzer, OUTPUT);
 }
 void  loop() {
@@ -53,10 +53,10 @@ void  loop() {
   }
   
   if (distance < 20) {
-    digitalWrite(LEDlampYellow,  HIGH);
+    digitalWrite(LEDlampBlue,  HIGH);
 }
   else {
-    digitalWrite(LEDlampYellow,LOW);
+    digitalWrite(LEDlampBlue,LOW);
   }
   if (distance  < 5) {
     digitalWrite(LEDlampRed, HIGH);
