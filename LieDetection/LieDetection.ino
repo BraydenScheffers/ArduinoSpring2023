@@ -4,9 +4,9 @@
 
 /// Green, Red, Blue (2,3,4) 
 
-int LEDGreen = 5; 
-int LEDRed = 4; 
-int LEDBlue = 3; 
+int LEDGreen = 4; 
+int LEDRed = 3; 
+int LEDBlue = 2; 
 
 void setup()
 {
@@ -24,7 +24,7 @@ void setup()
 
 void  loop()
 {
-  if (analogRead(A0) > 100)
+  if (analogRead(A0) > 80)
   {
     digitalWrite(LEDBlue, HIGH);
   }
@@ -32,7 +32,7 @@ void  loop()
   {
     digitalWrite(LEDBlue,  LOW);
   }
-  if (analogRead(A0) > 60)
+  if (analogRead(A0) > 30)
   {
     digitalWrite(LEDGreen, HIGH);
   }
@@ -40,7 +40,7 @@ void  loop()
   {
     digitalWrite(LEDGreen,  LOW);
   }
-  if (analogRead(A0) > 80)
+  if (analogRead(A0) > 45)
   {
     digitalWrite(LEDRed, HIGH);
   }
