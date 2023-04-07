@@ -4,9 +4,11 @@
 
 /// Green, Red, Blue (2,3,4) 
 
-int LEDGreen = 4; 
-int LEDRed = 3; 
-int LEDBlue = 2; 
+int LEDGreen = 12; 
+int LEDRed = 11; 
+int LEDBlue = 10; 
+int soundbuzzer = 3; 
+int sound = 500; 
 
 void setup()
 {
@@ -40,7 +42,7 @@ void  loop()
   {
     digitalWrite(LEDGreen,  LOW);
   }
-  if (analogRead(A0) > 45)
+  if (analogRead(A0) > 50) 
   {
     digitalWrite(LEDRed, HIGH);
   }
@@ -51,4 +53,12 @@ void  loop()
 
   Serial.println(analogRead(A0));
   delay(20);
+
+
+  if (analogRead(A0) > 50){ 
+    noTone(soundbuzzer);
+  }
+  else {
+    tone(soundbuzzer, sound); 
+  }
 }
